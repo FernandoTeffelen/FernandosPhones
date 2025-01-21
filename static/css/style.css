@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+
+/* MEU CÓDIGO - abaixo */
+/* Body */
+.body {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+    text-align: left;
+    gap: 2rem; /* Espaço entre a imagem e o texto */
+    margin: 2rem;
+}
+
+.body img {
+    max-width: 100%; /* Limita a largura da imagem para caber bem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.body .text {
+    flex: 1; /* Faz o texto ocupar o restante do espaço */
+    font-family: Arial, sans-serif;
+    color: #333;
+    align-items: left;
+    text-align: left;
+}
+
+.body .text h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #27ae60;
+    align-items: left;
+    text-align: left;
+}
+
+.body .text p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    align-items: left;
+    text-align: left;
+}
+
+.body .text .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e74c3c;
+    align-items: left;
+    text-align: left;
+}
+
+.produtos{
+    margin-left: 2.5rem;
+}
+
+/* Botão do WhatsApp */
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    background-color: #128C7E;
+}
+
+.whatsapp-icon {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.whatsapp-link:active {
+    background-color: #075E54;
+}
+
+
+/* Botão de voltar */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 1%;
+}
+
+.back-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.back-button:active {
+    background-color: #111;
+    transform: scale(1);
+}
+
+.back-icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+/* MEU CÓDIGO - acima */
+
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 1%;
+}
+
+.header h1 {
+    text-align: center;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.product-image {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.product-price {
+    color: #27ae60;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.product-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+.product-link:hover {
+    background-color: #555;
+}
+
+.product-details {
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.product-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.product-info {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.img-produto {
+    width: 400px;
+    margin: 1rem 0;
+}
+
+.footer{
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.color-options {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.color-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+.color-radio {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    outline: none;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.color-radio:checked {
+    background-color: #27ae60;
+    border-color: #27ae60;
+}
+
+.color-name {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.color-label:hover .color-radio {
+    border-color: #555;
+    transform: scale(1.1);
+}

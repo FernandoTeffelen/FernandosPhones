@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Produto: {{ produto.name }}</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Fernando Phones</h1>
+    </header>
+    <a href="/" class="back-button">
+        <span class="back-icon">&#8592;</span> Voltar
+    </a>
+
+
+    <main class="product-details">
+        <h1 class="product-title">{{ produto.name }}</h1>
+        <div class="body">
+            <div class="img">
+                <img src="/static/img/{{ produto.image }}" alt="{{ produto.name }}" class="img-produto">
+            </div>
+            <div class="produtos">
+                <p class="product-info"><strong>Preço:</strong> {{ produto.price }}</p>
+                <p class="product-info"><strong>Modelo:</strong> {{ produto.model }}</p>
+                <p class="product-info"><strong>Cores disponíveis:</strong>
+                    <ul class="color-options">
+                        {% for cor in cores %}
+                        <label class="color-label">
+                            <input type="radio" class="color-radio" name="color" onclick="toggleRadio(this)">
+                            <span class="color-name">{{ cor }}</span>
+                        </label>
+                        {% endfor %}
+                    </ul>
+                </p>
+                <p class="product-info"><strong>Armazenamento:</strong> {{ produto.storage }}</p>
+                <p class="product-info"><strong>RAM:</strong> {{ produto.ram }}</p>
+                <br>
+                <a href="https://wa.me/555186301458?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%A3o%20sobre%20o%20produto%3A%20{{ produto.name | urlencode }}"
+                   target="_blank" class="whatsapp-link">
+                    <i class="fab fa-whatsapp whatsapp-icon"></i>
+                    Enviar mensagem no WhatsApp
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer"> <p>© 2024 Loja de Celulares. Todos os direitos reservados.</p> </footer>
+</body>
+</html>
